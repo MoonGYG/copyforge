@@ -66,7 +66,7 @@ export default function Home() {
         </p>
         <div className="flex items-center justify-center gap-2 mt-3 text-sm" style={{ color: "var(--text-muted)" }}>
           <Sparkles className="w-4 h-4 spark-icon" />
-          <span>Powered by MiMo AI</span>
+          <span>Forged with MiMo v2.5 Pro</span>
         </div>
       </header>
 
@@ -243,7 +243,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="max-w-5xl mx-auto mt-12 text-center text-sm" style={{ color: "var(--text-muted)" }}>
-        <p>CopyForge — Powered by MiMo AI</p>
+        <p>CopyForge — Forged with MiMo v2.5 Pro</p>
       </footer>
     </main>
   );
