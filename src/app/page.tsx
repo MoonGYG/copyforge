@@ -13,6 +13,25 @@ const COPY_TYPES = [
 
 const TONES = ["Professional", "Casual", "Bold", "Luxury", "Playful", "Urgent"];
 
+const SAMPLE_COPY = `**Never Lose a File Again.**
+CloudSync Pro gives your team a single, secure workspace to store, share, and collaborate on files in real time — from anywhere on Earth.
+
+---
+
+🔒 **End-to-End Encryption**
+Your data is encrypted in transit and at rest with AES-256. Only you and your team hold the keys — not even we can read your files.
+
+⚡ **Real-Time Collaboration**
+Edit documents, review designs, and leave comments together simultaneously. No more email attachments or version confusion.
+
+📂 **Smart File Organization**
+AI-powered tagging, instant search, and automatic versioning mean you find what you need in seconds — not minutes.
+
+---
+
+**Start your free 14-day trial today.** No credit card required. Deploy in under 5 minutes.
+👉 [Get Started Free →](https://example.com)`;
+
 export default function Home() {
   const [copyType, setCopyType] = useState("landing");
   const [productName, setProductName] = useState("");
@@ -53,6 +72,15 @@ export default function Home() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const handleExample = () => {
+    setCopyType("landing");
+    setProductName("CloudSync Pro");
+    setDescription("Enterprise cloud storage with real-time collaboration, end-to-end encryption, and smart file organization.");
+    setAudience("Remote teams and enterprises");
+    setTone("Professional");
+    setOutput(SAMPLE_COPY);
+  };
+
   return (
     <main className="min-h-screen px-4 py-8 md:px-8">
       {/* Header */}
@@ -73,6 +101,19 @@ export default function Home() {
       <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left Panel: Input Form */}
         <div className="lg:col-span-2 space-y-5">
+          {/* Try Example Button */}
+          <button
+            onClick={handleExample}
+            className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all hover:scale-[1.01]"
+            style={{
+              background: "transparent",
+              border: "2px dashed var(--border-warm)",
+              color: "var(--accent-gold)",
+            }}
+          >
+            ⚡ Try Example — Landing Page Copy
+          </button>
+
           {/* Copy Type Selector */}
           <div className="glass-card p-5">
             <h2 className="text-sm font-semibold mb-3" style={{ color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
